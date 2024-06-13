@@ -1,0 +1,7 @@
+{% load customfunction %}
+<ul class="list-group">
+	<li class="list-group-item d-flex justify-content-between align-items-center"><h4>Checkout Summary</h4></li>
+	<li class="list-group-item d-flex justify-content-between align-items-center"> Усього книжок<span>{{ cart|length }}</span></li>
+	<li class="list-group-item d-flex justify-content-between align-items-center">Дата оренди книжки<span>{{ cost|shipping }} </span></li>
+	<li class="list-group-item d-flex justify-content-between align-items-center">Дата повернення книжки<span>{{ cart.get_total_price|payabletotal}} </span></li>
+</ul>	
